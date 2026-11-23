@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "One row per customer_id. customer_unique_id identifies the real person."
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+
+  - name: dim_sellers
+    description: "One row per seller."
+    columns:
+      - name: seller_id
+        tests: [unique, not_null]
+
+  - name: dim_products
+    description: "One row per product, with the English category name."
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+      - name: category
+        tests: [not_null]
+
+  - name: fct_sales
+    description: "One row per item sold. Revenue is price; freight is shipping cost."
+    columns:
+      - name: sales_item_id
+        tests: [unique, not_null]
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+      - name: product_id
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_id
+      - name: seller_id
+        tests:
+          - relationships:
+              to: ref('dim_sellers')
+              field: seller_id
+      - name: price
+        tests: [not_null]
