@@ -8,3 +8,4 @@ data/raw/
 mlruns/
 target/
 logs/
+.user.yml
