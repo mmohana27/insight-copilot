@@ -6,3 +6,5 @@ data/raw/
 *.csv
 .DS_Store
 mlruns/
+target/
+logs/

@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "One row per order, with proper data types."
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: order_status
+        tests:
+          - accepted_values:
+              values: ['delivered', 'shipped', 'canceled', 'unavailable',
+                       'invoiced', 'processing', 'created', 'approved']
