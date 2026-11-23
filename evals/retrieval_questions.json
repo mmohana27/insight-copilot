@@ -1,0 +1,23 @@
+[
+  {"question": "How do I send an item back?", "files": ["refund_return_policy.pdf"], "must_contain": "7 calendar days"},
+  {"question": "How long do refunds take to reach the customer?", "files": ["refund_return_policy.pdf"], "must_contain": "10 business days"},
+  {"question": "Who pays for return shipping if I just change my mind?", "files": ["refund_return_policy.pdf"], "must_contain": "customer pays return shipping"},
+  {"question": "How many days do customers have to return a damaged product?", "files": ["refund_return_policy.pdf"], "must_contain": "30 calendar days"},
+  {"question": "What happens if profit margin gets too low?", "files": ["finance_close_calendar.pdf"], "must_contain": "below 5 percent"},
+  {"question": "When does the monthly P and L get published?", "files": ["finance_close_calendar.pdf"], "must_contain": "business day 7"},
+  {"question": "Which cost types are included in operating costs?", "files": ["kpi_definitions.pdf", "finance_close_calendar.pdf"], "must_contain": "logistics_overhead"},
+  {"question": "Which campaign ran around Black Friday?", "files": ["marketing_campaign_playbook.pdf"], "must_contain": "C007"},
+  {"question": "Which campaign targeted only Rio de Janeiro?", "files": ["marketing_campaign_playbook.pdf"], "must_contain": "RJ only"},
+  {"question": "How is average order value calculated?", "files": ["kpi_definitions.pdf"], "must_contain": "divided by orders"},
+  {"question": "Which months have reliable data?", "files": ["kpi_definitions.pdf", "seasonality_and_events_brief.pdf"], "must_contain": "August 2018"},
+  {"question": "What was the biggest shopping event?", "files": ["seasonality_and_events_brief.pdf"], "must_contain": "biggest shopping event"},
+  {"question": "What is the on-time delivery target?", "files": ["delivery_sla_policy.pdf"], "must_contain": "90 percent"},
+  {"question": "What late delivery rate triggers a carrier review?", "files": ["delivery_sla_policy.pdf"], "must_contain": "carrier review"},
+  {"question": "Which tables is the AI allowed to read?", "files": ["data_governance_and_privacy.pdf"], "must_contain": "marts schema"},
+  {"question": "What is the maximum number of rows an AI query can return?", "files": ["data_governance_and_privacy.pdf"], "must_contain": "1,000 rows"},
+  {"question": "Can customer names be shown in answers?", "files": ["data_governance_and_privacy.pdf"], "must_contain": "individual customers"},
+  {"question": "What does customer_unique_id represent?", "files": ["data_dictionary.pdf"], "must_contain": "identifies the real person"},
+  {"question": "What review score should we aim for?", "files": ["customer_service_and_reviews_policy.pdf"], "must_contain": "4.0 or higher"},
+  {"question": "How fast must negative reviews be answered?", "files": ["customer_service_and_reviews_policy.pdf"], "must_contain": "48 hours"},
+  {"question": "Which category does an item without a category fall in?", "files": ["product_category_guide.pdf", "data_dictionary.pdf"], "must_contain": "unknown"}
+]
