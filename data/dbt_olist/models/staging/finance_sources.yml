@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw_finance
+    schema: raw
+    tables:
+      - name: budget
+      - name: operating_costs
+      - name: marketing_campaigns

@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: fct_budget_vs_actual
+    description: "Actual vs budgeted revenue per month and category. variance = actual - budget."
+    columns:
+      - name: budget_key
+        tests: [unique, not_null]
+
+  - name: fct_monthly_pnl
+    description: "Monthly revenue, operating costs and operating profit (costs are synthetic)."
+    columns:
+      - name: year_month
+        tests: [unique, not_null]

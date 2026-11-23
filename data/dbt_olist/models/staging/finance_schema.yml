@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_budget
+    description: "Planned revenue per month and product category (synthetic)."
+    columns:
+      - name: category
+        tests: [not_null]
+      - name: budget_revenue
+        tests: [not_null]
+
+  - name: stg_operating_costs
+    description: "Monthly operating costs by type (synthetic)."
+    columns:
+      - name: cost_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['cost_of_goods', 'marketing', 'logistics_overhead',
+                         'platform_tech', 'customer_support', 'payroll']
+      - name: amount
+        tests: [not_null]
+
+  - name: stg_marketing_campaigns
+    description: "Marketing campaigns with channel, dates and spend (synthetic)."
+    columns:
+      - name: campaign_id
+        tests: [unique, not_null]
